@@ -52,6 +52,7 @@ namespace Inläming_1___Tärningar
                         Console.WriteLine("Pix kvar: " + pix);
                     }
 
+
                     else if (tärning1 == ValtLyckoTal || tärning2 == ValtLyckoTal || tärning3 == ValtLyckoTal)
                     {
 
