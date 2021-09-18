@@ -86,7 +86,7 @@ namespace Inläming_1___Tärningar
                 if (pix >= 50)
                 {
                     
-                    Console.WriteLine("Vill du spel igen? " + "Skriv ja om du vill köra igen. ");
+                    Console.WriteLine("Vill du spel igen? " + "Skriv ja om du vill köra igen.");
                     
                     sant = Console.ReadLine();
                     Console.Clear();
