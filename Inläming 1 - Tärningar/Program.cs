@@ -14,6 +14,17 @@ namespace Inläming_1___Tärningar
             int ValtLyckoTal = 0;
             ValtLyckoTal = int.Parse(Console.ReadLine());
 
+            if (tärning1 == ValtLyckoTal || tärning2 == ValtLyckoTal || tärning3 == ValtLyckoTal)
+            {
+
+                Console.WriteLine("Du har Vunnit");
+
+            }
+            else
+            {
+                Console.WriteLine("Du har förlorat");
+            }
+
         }
     }
 }
