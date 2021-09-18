@@ -18,18 +18,29 @@ namespace Inläming_1___Tärningar
             Console.WriteLine("Satsa Pix");
             SatsadePix = int.Parse(Console.ReadLine());
 
-            if (tärning1 == ValtLyckoTal || tärning2 == ValtLyckoTal || tärning3 == ValtLyckoTal)
-            {
-                SatsadePix = SatsadePix *= 2;
-                pix = pix += SatsadePix;
-                Console.WriteLine("Du har Vunnit " + "Pix kvar: " + pix);
 
+            if (SatsadePix >= 50 && SatsadePix >= 500 && ValtLyckoTal >= 1 && ValtLyckoTal <= 6)
+            {
+                if (tärning1 == ValtLyckoTal || tärning2 == ValtLyckoTal || tärning3 == ValtLyckoTal)
+                {
+                    SatsadePix = SatsadePix *= 2;
+                    pix = pix += SatsadePix;
+                    Console.WriteLine("Du har Vunnit " + "Pix kvar: " + pix);
+
+
+                }
+                else
+                {
+                    pix = pix -= SatsadePix;
+                    Console.WriteLine("Du har förlorat " + "Pix kvar: " + pix);
+
+                }
 
             }
+
             else
             {
-                pix = pix -= SatsadePix;
-                Console.WriteLine("Du har förlorat " + "Pix kvar: " + pix);
+                Console.WriteLine("Du angivit ett för stort eller litet tal");
 
             }
 
