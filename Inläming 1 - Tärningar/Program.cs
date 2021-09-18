@@ -19,20 +19,48 @@ namespace Inläming_1___Tärningar
             SatsadePix = int.Parse(Console.ReadLine());
 
 
-            if (SatsadePix >= 50 && SatsadePix >= 500 && ValtLyckoTal >= 1 && ValtLyckoTal <= 6)
+            if (SatsadePix >= 50 && SatsadePix <= 500 && ValtLyckoTal >= 1 && ValtLyckoTal <= 6)
             {
-                if (tärning1 == ValtLyckoTal || tärning2 == ValtLyckoTal || tärning3 == ValtLyckoTal)
+
+                if (tärning1 == ValtLyckoTal && tärning2 == ValtLyckoTal && tärning3 == ValtLyckoTal)
                 {
-                    SatsadePix = SatsadePix *= 2;
+
+                    SatsadePix = SatsadePix *= 4;
                     pix = pix += SatsadePix;
-                    Console.WriteLine("Du har Vunnit " + "Pix kvar: " + pix);
+
+                    Console.WriteLine("Du har Vunnit 4x " + "Pix kvar: " + pix);
+                    Console.WriteLine("Tärning 1; " + tärning1 + " Tärning2; " + tärning2 + " Tärning3; " + tärning2);
 
 
                 }
+
+                else if (tärning1 == ValtLyckoTal && tärning2 == ValtLyckoTal || tärning2 == ValtLyckoTal && tärning3 == ValtLyckoTal || tärning3 == ValtLyckoTal &&  tärning2 == ValtLyckoTal || tärning3 == ValtLyckoTal && tärning3 == ValtLyckoTal)
+                {
+                    SatsadePix = SatsadePix *= 3;
+                    pix = pix += SatsadePix;
+
+                    Console.WriteLine("Du har Vunnit 3x " + "Pix kvar: " + pix);
+                    Console.WriteLine("Tärning 1; " + tärning1 + " Tärning2; " + tärning2 + " Tärning3; " + tärning2);
+                }
+                
+                else if (tärning1 == ValtLyckoTal || tärning2 == ValtLyckoTal || tärning3 == ValtLyckoTal)
+                {
+                    SatsadePix = SatsadePix *= 2;
+                    pix = pix += SatsadePix;
+
+                    Console.WriteLine("Du har Vunnit 2x " + "Pix kvar: " + pix);
+                    Console.WriteLine("Tärning 1; " + tärning1 + " Tärning2; " + tärning2 + " Tärning3; " + tärning2);
+
+
+                }
+
                 else
                 {
                     pix = pix -= SatsadePix;
                     Console.WriteLine("Du har förlorat " + "Pix kvar: " + pix);
+
+                    Console.WriteLine("Tärning 1; " + tärning1 + " Tärning2; " + tärning2 + " Tärning3; " + tärning2);
+                    Console.WriteLine("Pengar Kvar: " + pix);
 
                 }
 
@@ -41,9 +69,18 @@ namespace Inläming_1___Tärningar
             else
             {
                 Console.WriteLine("Du angivit ett för stort eller litet tal");
+                Console.WriteLine("Tärning 1; " + tärning1 + " Tärning2; " + tärning2 + " Tärning2; " + tärning2);
+                
 
             }
 
+
+        }
+        static void PengKvarOchTärningar(int tärning1, int tärning2, int tärning3, int pix)
+        {
+
+            Console.WriteLine("Tärning 1; " + tärning1 + " Tärning2; " + tärning2 + " Tärning2; " + tärning2);
+            Console.WriteLine("Pengar Kvar: " + pix);
         }
     }
 }
