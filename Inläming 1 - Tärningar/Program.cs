@@ -6,7 +6,7 @@ namespace Inläming_1___Tärningar
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int pix = 500;
         }
     }
 }
