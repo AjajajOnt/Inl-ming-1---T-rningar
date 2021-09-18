@@ -2,9 +2,9 @@
 
 namespace Inläming_1___Tärningar
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Random rnd = new Random();
             int pix = 500;
@@ -13,7 +13,7 @@ namespace Inläming_1___Tärningar
             string sant = "ja";
 
 
-            while (pix >= 50 &&  sant == "ja")
+            while (pix >= 50 && sant == "ja")
             {
 
                 int tärning1 = rnd.Next(1, 6);
@@ -29,37 +29,36 @@ namespace Inläming_1___Tärningar
 
 
                 {
-                    
+
 
                     if (tärning1 == ValtLyckoTal && tärning2 == ValtLyckoTal && tärning3 == ValtLyckoTal)
                     {
 
-
+                        Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
                         SatsadePix = SatsadePix *= 4;
                         Console.WriteLine("Du har Vunnit: " + SatsadePix + " Pix");
                         pix = pix += SatsadePix;
-
                         Console.WriteLine("Pix kvar: " + pix);
 
 
                     }
 
-                    else if (tärning1 == ValtLyckoTal && tärning2 == ValtLyckoTal || tärning2 == ValtLyckoTal && tärning3 == ValtLyckoTal || tärning3 == ValtLyckoTal && tärning2 == ValtLyckoTal || tärning3 == ValtLyckoTal && tärning3 == ValtLyckoTal)
+                    else if (tärning1 == ValtLyckoTal && tärning2 == ValtLyckoTal || tärning2 == ValtLyckoTal && tärning3 == ValtLyckoTal || tärning3 == ValtLyckoTal && tärning1 == ValtLyckoTal)
                     {
+                        Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
                         SatsadePix = SatsadePix *= 3;
                         Console.WriteLine("Du har Vunnit: " + SatsadePix + " Pix");
                         pix = pix += SatsadePix;
-
                         Console.WriteLine("Pix kvar: " + pix);
                     }
 
                     else if (tärning1 == ValtLyckoTal || tärning2 == ValtLyckoTal || tärning3 == ValtLyckoTal)
                     {
 
+                        Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
                         SatsadePix = SatsadePix *= 2;
                         Console.WriteLine("Du har Vunnit: " + SatsadePix + " Pix");
                         pix = pix += SatsadePix;
-
                         Console.WriteLine("Pix kvar: " + pix);
 
 
@@ -67,6 +66,7 @@ namespace Inläming_1___Tärningar
 
                     else
                     {
+                        Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
                         Console.WriteLine("Du har förlorat: " + SatsadePix + " Pix");
                         pix = pix -= SatsadePix;
                         Console.WriteLine("Pix Kvar: " + pix);
@@ -81,19 +81,17 @@ namespace Inläming_1___Tärningar
 
 
                 }
-                
+
 
                 if (pix >= 50)
                 {
-                    
+
                     Console.WriteLine("Vill du spel igen? " + "Skriv ja om du vill köra igen.");
-                    
+
                     sant = Console.ReadLine();
                     Console.Clear();
 
                 }
-                
-
 
             }
         }
@@ -101,5 +99,5 @@ namespace Inläming_1___Tärningar
 
     }
 
-    
+
 }
