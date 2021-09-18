@@ -7,13 +7,13 @@ namespace Inläming_1___Tärningar
         private static void Main(string[] args)
         {
             Random rnd = new Random();
-            int pix = 500;
+            int PixBankKonto = 500;
             int ValtLyckoTal = 0;
             int SatsadePix = 0;
             string sant = "ja";
 
 
-            while (pix >= 50 && sant == "ja")
+            while (PixBankKonto >= 50 && sant == "ja")
             {
 
                 int tärning1 = rnd.Next(1, 6);
@@ -21,11 +21,11 @@ namespace Inläming_1___Tärningar
                 int tärning3 = rnd.Next(1, 6);
                 Console.WriteLine("Välj ett lyckotal mellan 1 och 6");
                 ValtLyckoTal = int.Parse(Console.ReadLine());
-                Console.WriteLine("Du har: " + pix + " Pix ");
+                Console.WriteLine("Du har: " + PixBankKonto + " Pix ");
                 Console.WriteLine("Satsa Pix:");
                 SatsadePix = int.Parse(Console.ReadLine());
 
-                if (SatsadePix >= 50 && SatsadePix <= pix && ValtLyckoTal >= 1 && ValtLyckoTal <= 6)
+                if (SatsadePix >= 50 && SatsadePix <= PixBankKonto && ValtLyckoTal >= 1 && ValtLyckoTal <= 6)
 
 
                 {
@@ -37,8 +37,8 @@ namespace Inläming_1___Tärningar
                         Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
                         SatsadePix = SatsadePix *= 4;
                         Console.WriteLine("Du har Vunnit: " + SatsadePix + " Pix");
-                        pix = pix += SatsadePix;
-                        Console.WriteLine("Pix kvar: " + pix);
+                        PixBankKonto = PixBankKonto += SatsadePix;
+                        Console.WriteLine("Pix kvar: " + PixBankKonto);
 
 
                     }
@@ -48,8 +48,8 @@ namespace Inläming_1___Tärningar
                         Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
                         SatsadePix = SatsadePix *= 3;
                         Console.WriteLine("Du har Vunnit: " + SatsadePix + " Pix");
-                        pix = pix += SatsadePix;
-                        Console.WriteLine("Pix kvar: " + pix);
+                        PixBankKonto = PixBankKonto += SatsadePix;
+                        Console.WriteLine("Pix kvar: " + PixBankKonto);
                     }
 
 
@@ -59,8 +59,8 @@ namespace Inläming_1___Tärningar
                         Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
                         SatsadePix = SatsadePix *= 2;
                         Console.WriteLine("Du har Vunnit: " + SatsadePix + " Pix");
-                        pix = pix += SatsadePix;
-                        Console.WriteLine("Pix kvar: " + pix);
+                        PixBankKonto = PixBankKonto += SatsadePix;
+                        Console.WriteLine("Pix kvar: " + PixBankKonto);
 
 
                     }
@@ -69,8 +69,8 @@ namespace Inläming_1___Tärningar
                     {
                         Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
                         Console.WriteLine("Du har förlorat: " + SatsadePix + " Pix");
-                        pix = pix -= SatsadePix;
-                        Console.WriteLine("Pix Kvar: " + pix);
+                        PixBankKonto = PixBankKonto -= SatsadePix;
+                        Console.WriteLine("Pix Kvar: " + PixBankKonto);
 
                     }
 
@@ -84,7 +84,7 @@ namespace Inläming_1___Tärningar
                 }
 
 
-                if (pix >= 50)
+                if (PixBankKonto >= 50)
                 {
 
                     Console.WriteLine("Vill du spel igen? " + "Skriv ja om du vill köra igen.");
