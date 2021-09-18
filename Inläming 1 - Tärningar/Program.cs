@@ -35,9 +35,9 @@ namespace Inläming_1___Tärningar
                     {
 
                         Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
-                        SatsadePix = SatsadePix *= 4;
+                        SatsadePix *= 4;
                         Console.WriteLine("Du har Vunnit: " + SatsadePix + " Pix");
-                        PixBankKonto = PixBankKonto += SatsadePix;
+                        PixBankKonto += SatsadePix;
                         Console.WriteLine("Pix kvar: " + PixBankKonto);
 
 
@@ -46,9 +46,9 @@ namespace Inläming_1___Tärningar
                     else if (tärning1 == ValtLyckoTal && tärning2 == ValtLyckoTal || tärning2 == ValtLyckoTal && tärning3 == ValtLyckoTal || tärning3 == ValtLyckoTal && tärning1 == ValtLyckoTal)
                     {
                         Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
-                        SatsadePix = SatsadePix *= 3;
+                        SatsadePix *= 3;
                         Console.WriteLine("Du har Vunnit: " + SatsadePix + " Pix");
-                        PixBankKonto = PixBankKonto += SatsadePix;
+                        PixBankKonto += SatsadePix;
                         Console.WriteLine("Pix kvar: " + PixBankKonto);
                     }
 
@@ -57,9 +57,9 @@ namespace Inläming_1___Tärningar
                     {
 
                         Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
-                        SatsadePix = SatsadePix *= 2;
+                        SatsadePix *= 2;
                         Console.WriteLine("Du har Vunnit: " + SatsadePix + " Pix");
-                        PixBankKonto = PixBankKonto += SatsadePix;
+                        PixBankKonto += SatsadePix;
                         Console.WriteLine("Pix kvar: " + PixBankKonto);
 
 
@@ -69,7 +69,7 @@ namespace Inläming_1___Tärningar
                     {
                         Console.WriteLine("Tärning ett blev: " + tärning1 + " Tärning två blev: " + tärning2 + " Tärning tre blev: " + tärning3);
                         Console.WriteLine("Du har förlorat: " + SatsadePix + " Pix");
-                        PixBankKonto = PixBankKonto -= SatsadePix;
+                        PixBankKonto -= SatsadePix;
                         Console.WriteLine("Pix Kvar: " + PixBankKonto);
 
                     }
