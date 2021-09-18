@@ -10,9 +10,10 @@ namespace Inläming_1___Tärningar
             int pix = 500;
             int ValtLyckoTal = 0;
             int SatsadePix = 0;
+            string sant = "ja";
 
 
-            while (pix >= 50)
+            while (pix >= 50 &&  sant == "ja")
             {
 
                 int tärning1 = rnd.Next(1, 6);
@@ -78,6 +79,8 @@ namespace Inläming_1___Tärningar
 
 
                 }
+                Console.WriteLine("Vill du spel igen? "  +  "Skriv ja om du vill köra igen. ");
+                sant = Console.ReadLine();
             }
         }
 
